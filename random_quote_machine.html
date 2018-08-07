@@ -1,0 +1,41 @@
+<head>
+        <script src="jquery.js"></script>
+        <link rel="stylesheet" type="text/css" href="Rqm.css">
+</head>
+
+<body>
+    <div class="flex">
+    <h1>Random Quote Machine</h1>
+    
+     
+    <div id=quote></div>
+    <div id="author"></div>
+    <div id="buttons">
+    <button id="new-quote">New Quote!</button>
+</div>
+    
+    <script>
+
+    $(document).ready(
+    function(){
+        $.getJSON('https://talaikis.com/api/quotes/random/',function(json){
+                  
+                  $('#author').text(json.author);
+                  $('#quote').text(json.quote);
+               })
+
+        $('#new-quote').click(
+            function(event){
+                $.getJSON('https://talaikis.com/api/quotes/random/',function(json){
+                  
+                   $('#author').text(json.author);
+                   $('#quote').text(json.quote);
+                })
+            }
+        )
+       
+    }
+)
+    </script>
+</div>
+</body>

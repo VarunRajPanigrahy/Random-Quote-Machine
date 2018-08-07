@@ -1,0 +1,26 @@
+body{
+    background-color: blanchedalmond
+}
+#author{
+    font-size: 30px;
+    text-align: right;
+    margin:40px;
+}
+#new-quote{
+    font-size: 20px;
+    margin:20px;
+    color: orange;
+    background-color: black;
+}
+#buttons{
+    text-align: center;
+}
+#quote{
+    font-size: 30px;
+}
+.flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
